@@ -1,0 +1,69 @@
+
+/// UI
+
+$project-palette: (
+  primary: #dee32e,
+  secondary: #34d47c,
+  success: #b2dd,
+  warning: #ddd,
+  alert: #cc4b37,
+) !default;
+
+// Internal variables used for colors
+$c-1: get-color(primary);
+$c-2: get-color(secondary);
+$c-3: get-color(success);
+$c-4: get-color(warning);
+$alert-color: get-color(alert);
+ 
+$body-antialiased: true !default;
+
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$body-font-family: 'Guggi';
+$body-font-weight: normal;
+
+
+/// Mixins
+
+@mixin box-sizing($type: border-box){
+    box-sizing: $type;
+}
+
+@mixin font-size($font-size, $line-height:true){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size)*1rem;
+    @if $line-height == true{
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+}
+ 
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin htmlAndBody(){
+    html {
+        box-sizing: border-box;
+        font-size: $base-font-size;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: $body-background;
+        font-family: $body-font-family;
+        font-weight: $global-weight-normal;
+        line-height: $global-lineheight;
+        color: $body-font-color;
+     
+        @if ($body-antialiased) {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+}
+

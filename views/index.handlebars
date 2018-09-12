@@ -1,0 +1,84 @@
+	
+	<main role="application" class="app-container">
+
+	<header role="banner" class="primary-app-header">
+		<h1 class="header-large">todo app</h1>
+	</header>
+
+
+<div class="base-row">	
+
+	<section class="base-section">
+		<header class="section-header">
+			<h2 class="section-heading">add a task</h2>
+		</header>
+		<div class="base-row">
+		<div class="form-wrap">
+			<form class="create-update-form" action="burgers/create" method="POST">
+				<div class="form-wrap">
+					<input type="text" id="burgerName" name="name" placeholder="Task Name" required autofocus>
+					<button type="submit" class="burger-add">add a task</button>
+
+				</div>
+			</form>
+			</div>
+		</div>
+	</section>	
+		
+	<section class="base-section" id="burger-menu">
+		<header class="section-header">
+			<h2 class="section-heading">todo tasks</h2>
+			<!-- these should be burgers -->
+		</header>
+			
+		
+		<div class="base-row">
+
+		{{#each burgers}}
+			  {{#unless this.devoured}}
+
+					<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+
+			  			<ul class="no-bullets">
+
+			  	<li class="list-group-item new-burgers">
+
+{{this.id}}. {{this.burger_name}}</li>
+					</ul>
+
+
+						<input type="hidden" name="devoured" value="true">
+						<button type="submit" class="button-devour">finished!</button>
+					</form>
+					  {{/unless}}			
+
+				{{/each}}
+
+			</div>
+	</section>
+
+	<section class="base-section">
+		<header class="section-header">
+			<h2 class="section-heading">completed to-dos</h2>
+		</header>
+			<div class="base-row">
+
+			{{#each burgers}}
+			  {{#if this.devoured}}
+			  			<ul class="no-bullets">
+
+			  	<li class="list-group-item done-burgers">
+					{{this.id}}. {{this.burger_name}}
+				</li>
+
+			</ul>
+			  {{/if}}
+			{{/each}}
+				
+
+				</div>
+	</section>
+
+	
+</div>
+</main>

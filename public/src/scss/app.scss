@@ -1,0 +1,256 @@
+/**
+ *
+ *
+ * @color
+ * @section Color Palates > Themes > Theme One
+ */
+ h1, h2, h3, h4, h5, h6,
+ p, blockquote, pre,
+ dl, dd, ol, ul,
+ form, fieldset, legend,
+ table, th, td, caption,
+ hr {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ label,
+ input,
+ textarea,
+ button,
+ select,
+ option {
+   cursor: pointer;
+ }
+ 
+ .text-input:active,
+ .text-input:focus,
+ textarea:active,
+ textarea:focus {
+   cursor: text;
+   outline: none;
+ }
+ 
+ /*____________________________________
+   Starter
+ \____________________________________*/
+ img {
+   border: 0;
+   -ms-interpolation-mode: bicubic;
+   vertical-align: middle;
+ }
+ 
+ input[type="checkbox"], input[type="radio"] {
+   box-sizing: border-box;
+   padding: 0;
+   *width: 13px;
+   *height: 13px;
+ }
+ 
+ input[type="search"] {
+   -webkit-appearance: textfield;
+   -moz-box-sizing: content-box;
+   -webkit-box-sizing: content-box;
+   box-sizing: content-box;
+ }
+ 
+ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+   -webkit-appearance: none;
+ }
+ 
+ button::-moz-focus-inner, input::-moz-focus-inner {
+   border: 0;
+   padding: 0;
+ }
+ 
+ textarea {
+   overflow: auto;
+   vertical-align: top;
+   resize: vertical;
+ }
+ 
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+ 
+ td {
+   vertical-align: top;
+ }
+ 
+ .primary-app-header {
+   text-transform: capitalize;
+   color: #fff;
+   text-align: center;
+   font-weight: 700;
+   margin-bottom: 2em;
+ }
+ 
+ h1 {
+   font-size: 42px;
+   font-size: 2.625rem;
+   line-height: 1.14286;
+ }
+ 
+ h2 {
+   font-size: 28px;
+   font-size: 1.75rem;
+   line-height: 1.71429;
+ }
+ 
+ * {
+   box-sizing: border-box;
+ }
+ 
+ *:before,
+ *:after {
+   box-sizing: inherit;
+ }
+ 
+ html {
+   height: 100%;
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+ }
+ 
+ body {
+   background: #C64B4D;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   line-height: 1em;
+   color: #333;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ .no-bullets {
+   list-style: none;
+   padding-left: 0;
+   float: left;
+   *zoom: 1;
+ }
+ 
+ .no-bullets:before, .no-bullets:after {
+   content: " ";
+   display: table;
+ }
+ 
+ .no-bullets:after {
+   clear: both;
+ }
+ 
+ .app-container {
+   margin: auto;
+   max-width: 1024px;
+   width: 100%;
+ }
+ 
+ .app-container .base-row {
+   width: 100%;
+   *zoom: 1;
+ }
+ 
+ .app-container .base-row:before, .app-container .base-row:after {
+   content: " ";
+   display: table;
+ }
+ 
+ .app-container .base-row:after {
+   clear: both;
+ }
+ 
+ .app-container .base-section {
+   width: 31%;
+   float: left;
+   margin-right: 2%;
+   background: #CE9E71;
+   padding: 1em;
+   color: #fff;
+   min-height: 15em;
+   *zoom: 1;
+ }
+ 
+ .app-container .base-section:before, .app-container .base-section:after {
+   content: " ";
+   display: table;
+ }
+ 
+ .app-container .base-section:after {
+   clear: both;
+ }
+ 
+ .section-heading {
+   border-bottom: thin solid #fff;
+   padding-bottom: 0;
+   line-height: 1.4;
+   margin-bottom: 1em;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ label,
+ button,
+ input {
+   text-transform: capitalize;
+ }
+ 
+ label {
+   font-size: 1.2rem;
+   color: #fff;
+ }
+ 
+ input[type="text"] {
+   font-size: 1rem;
+   color: slategray;
+   border: thin solid #ddd;
+   outline: none;
+   padding: 0.275em 0.125em;
+ }
+ 
+ button[type="submit"] {
+   padding: 0.5em;
+   font-size: 0.85rem;
+   text-align: center;
+   cursor: pointer;
+   color: #333;
+   float: right;
+   background: #C64B4D;
+   border: 0;
+   color: #fff;
+ }
+ 
+ button[type="submit"]:active, button[type="submit"]:hover {
+   outline: #fff thin 2px;
+ }
+ 
+ .form-label {
+   display: block;
+   padding-bottom: 0.275em;
+ }
+ 
+ .section-heading {
+   color: #fff;
+ }
+ 
+ @media only screen and (max-width: 30em) {
+   .app-container {
+     max-width: 98%;
+     padding: 0 1%;
+     float: none;
+   }
+   .app-container .base-section {
+     width: 100%;
+     margin: 1em 0;
+     clear: both;
+     *zoom: 1;
+   }
+   .app-container .base-section:before, .app-container .base-section:after {
+     content: " ";
+     display: table;
+   }
+   .app-container .base-section:after {
+     clear: both;
+   }
+ }
+ 
