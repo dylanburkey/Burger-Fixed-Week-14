@@ -17,6 +17,7 @@ if (process.env.JAWSDB_URL) {
 		user: 'root',
 		password: 'root',
 		database: 'burgers_db',
+		// Remove socketPath if you are not using MAMP
 		socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
 
 	});
